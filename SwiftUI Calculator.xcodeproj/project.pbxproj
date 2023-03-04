@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B603C9EC29B3F007002127FA /* CalculatorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603C9EB29B3F007002127FA /* CalculatorButtonView.swift */; };
 		B67A3D5729B13A7F0061C4B3 /* SwiftUI_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67A3D5629B13A7F0061C4B3 /* SwiftUI_CalculatorApp.swift */; };
 		B67A3D5929B13A7F0061C4B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67A3D5829B13A7F0061C4B3 /* ContentView.swift */; };
 		B67A3D5B29B13A800061C4B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67A3D5A29B13A800061C4B3 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B603C9EB29B3F007002127FA /* CalculatorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonView.swift; sourceTree = "<group>"; };
 		B67A3D5329B13A7F0061C4B3 /* SwiftUI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67A3D5629B13A7F0061C4B3 /* SwiftUI_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CalculatorApp.swift; sourceTree = "<group>"; };
 		B67A3D5829B13A7F0061C4B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				B67A3D5F29B13A800061C4B3 /* Persistence.swift */,
 				B67A3D6129B13A800061C4B3 /* SwiftUI_Calculator.xcdatamodeld */,
 				B67A3D5C29B13A800061C4B3 /* Preview Content */,
+				B603C9EB29B3F007002127FA /* CalculatorButtonView.swift */,
 			);
 			path = "SwiftUI Calculator";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B603C9EC29B3F007002127FA /* CalculatorButtonView.swift in Sources */,
 				B67A3D6029B13A800061C4B3 /* Persistence.swift in Sources */,
 				B67A3D5929B13A7F0061C4B3 /* ContentView.swift in Sources */,
 				B67A3D5729B13A7F0061C4B3 /* SwiftUI_CalculatorApp.swift in Sources */,

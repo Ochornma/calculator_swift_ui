@@ -8,6 +8,14 @@
 import SwiftUI
 import CoreData
 
+class GlobalEnviroment: ObservableObject{
+    @Published var display = "00"
+    
+    func receiveInput(button: CalculatorButton){
+        display = button.title
+    }
+}
+
 enum CalculatorButton: String{
     case zero, one, two, three, four, five, six, seven, eight, nine
     case decimal
@@ -69,6 +77,9 @@ enum CalculatorButton: String{
 }
 
 struct ContentView: View {
+    
+    @EnvironmentObject var env: GlobalEnviroment
+    
     let buttons:[[CalculatorButton]] = [
         [.ac, .plusMinus, .percent, .divide],
         [.seven, .eight, .nine, .multiply],
@@ -83,24 +94,14 @@ struct ContentView: View {
             VStack(spacing: 12){
                 HStack{
                     Spacer()
-                    Text("42").foregroundColor(.white)
+                    Text(self.env.display).foregroundColor(.white)
                         .font(.system(size: 64))
                 }.padding()
                 
                 ForEach(buttons, id: \.self){row in
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self){button in
-                            Button(action: {
-                                
-                            }, label: {
-                                Text(button.title)
-                                    .font(.system(size: 32))
-                                    .foregroundColor(.white)
-                                    .frame(width: buttonWidth(button: button), height: buttonHeight())
-                                    .background(button.backgroundColor)
-                                    .cornerRadius(buttonWidth(button: button)/2)
-                            })
-                          
+                            CalculatorButtonView(button: button)
                         }
                     }
                 }
@@ -108,23 +109,13 @@ struct ContentView: View {
             }.padding(.bottom)
         }
     }
-    private func buttonWidth(button: CalculatorButton) -> CGFloat{
-        if button == .zero{
-            return (UIScreen.main.bounds.width - (4 * 12))/2
-        }
-        return (UIScreen.main.bounds.width - (5 * 12))/4
-    }
-    
-    private func buttonHeight() -> CGFloat{
-        return (UIScreen.main.bounds.width - (5 * 12))/4
-    }
-
+  
 }
 
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(GlobalEnviroment())
     }
 }
